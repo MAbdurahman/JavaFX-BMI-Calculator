@@ -17,7 +17,7 @@ public class Main extends Application {
         primaryStage.getIcons().add(icon);
 
         primaryStage.setTitle(" B M I Calculator");
-        primaryStage.setScene(new Scene(root, 500, 300));
+        primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
     }
 

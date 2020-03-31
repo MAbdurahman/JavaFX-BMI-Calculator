@@ -1,8 +1,38 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<GridPane fx:controller="app.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="400.0" prefWidth="600.0"
+          xmlns="http://javafx.com/javafx/10.0.2-internal"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller"
+          style="-fx-font-size: 16" vgap="10">
+
+    <!-- Weight -->
+    <Label text="Weight (pounds):" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="weightField" prefHeight="37.0" prefWidth="242.0"
+               GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+    <!-- Height -->
+    <Label text="Height (inches):" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="heightField" prefHeight="37.0" prefWidth="240.0"
+               GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <!-- Body Mass Index -->
+    <Label text="BMI Results:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField fx:id="bodyMassIndexField" editable="false" prefHeight="37.0" prefWidth="240.0"
+               GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <!-- Button -->
+    <HBox alignment="bottom_center" spacing="10" style="-fx-cursor: hand"
+          GridPane.columnIndex="1" GridPane.columnSpan="2"
+          GridPane.rowIndex="4" GridPane.rowSpan="1">
+
+        <Button onAction="#calculateButtonClicked" prefHeight="38.0" prefWidth="120.0" text="Calculate" />
+        <Button onAction="#resetButtonClicked" prefHeight="38.0" prefWidth="120.0" text="Reset BMI" />
+    </HBox>
+    <GridPane.margin>
+        <Insets right="20.0" top="40.0" />
+    </GridPane.margin>
 </GridPane>
