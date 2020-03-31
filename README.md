@@ -1,1 +1,1 @@
-# JavaFx-BMI-Calculator
+# JavaFX-BMI-Calculator
